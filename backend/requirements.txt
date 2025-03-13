@@ -1,0 +1,6 @@
+fastapi
+requests
+google-genai
+httpx
+python-dotenv
+pytest
