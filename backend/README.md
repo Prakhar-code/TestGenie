@@ -55,4 +55,6 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 # Author
 
 Prakhar Kabra
-[LinkedIn](https://www.linkedin.com/in/prakhar-kabra-98a2521ba/)
+
+[LinkedIn](https://www.linkedin.com/in/prakhar-kabra-98a2521ba/) 
+
