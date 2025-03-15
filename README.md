@@ -39,7 +39,7 @@ Alternatively, you can download the `.vsix` file and install it manually via the
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/TestGenie.git
+   git clone https://github.com/Prakhar-code/TestGenie.git
    cd TestGenie/backend
    ```
 
