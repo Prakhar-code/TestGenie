@@ -10,14 +10,46 @@
     "Other"
   ],
   "activationEvents": [],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
-    "commands": [
+    "commands": [{
+      "command": "file-reader.sendToBackend",
+      "title": "TestGenie: Generate Test Cases"
+    },
+    {
+      "command": "file-reader.optimizeContract",
+      "title": "TestGenie: Optimize API Contract"
+    },
+    {
+      "command": "file-reader.explainCode",
+      "title": "TestGenie: Explain Code"
+    },
+    {
+      "command":"file-reader.startChat",
+      "title": "TestGenie: Start Chat"
+    }],
+    "menus": {
+      "editor/context": [{
+        "when": "resourceExtname == .json || resourceExtname == .yaml || resourceExtname == .yml",
+        "command": "file-reader.sendToBackend",
+        "group": "navigation"
+      },
       {
-        "command": "testgenie.helloWorld",
-        "title": "Hello World"
-      }
-    ]
+        "when": "resourceExtname == .json || resourceExtname == .yaml || resourceExtname == .yml",
+        "command": "file-reader.optimizeContract",
+        "group": "navigation"
+      },
+      {
+        "when": "editorHasSelection",
+        "command": "file-reader.explainCode",
+        "group": "navigation"
+      },
+      {
+        "when": "editorHasSelection",
+        "command": "file-reader.startChat",
+        "group": "navigation"
+      }]
+    }
   },
   "scripts": {
     "lint": "eslint .",
@@ -33,6 +65,7 @@
     "eslint": "^9.21.0"
   },
   "dependencies": {
-    "axios": "^1.8.3"
+    "axios": "^1.8.3",
+    "js-yaml": "^4.1.0"
   }
 }
